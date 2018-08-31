@@ -1,0 +1,16 @@
+<% provide(:title, "Home") %>
+<h1>画像アップロード</h1>
+
+<%#アップロードフォーム%>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@picture) do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+
+      <%= f.file_field :filepath %>
+
+      <%= f.submit "Post", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
