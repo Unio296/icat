@@ -7,7 +7,7 @@
     <%= form_for(@picture) do |f| %>
     <%= render 'shared/error_messages' %>
       <%= f.label :title %>
-      <%= f.text_area :title %>
+      <%= f.text_field :title %>
 
       <%= f.label :font_size, "文字サイズ：60" %>
       <%= f.range_field :font_size, min: 20, max: 100, step: 1, value: 60 %>
