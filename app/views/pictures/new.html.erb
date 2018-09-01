@@ -5,8 +5,18 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@picture) do |f| %>
+    <%= render 'shared/error_messages' %>
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_area :title %>
+
+      <%= f.label :font_size, "文字サイズ：60" %>
+      <%= f.range_field :font_size, min: 20, max: 100, step: 1, value: 60 %>
+
+      <%= f.label :band_width, "帯横幅：100%" %>
+      <%= f.range_field :band_width, min: 0, max: 100, step: 1, value: 100 %>
+
+      <%= f.label :band_height, "帯縦幅：50%" %>
+      <%= f.range_field :band_height, min: 0, max: 100, step: 1, value: 50 %>
 
       <%= f.file_field :filepath %>
 
@@ -14,3 +24,11 @@
     <% end %>
   </div>
 </div>
+
+<%# プレビュー未実装
+<div id="preview" class="preview">
+  <div id="preview-band" class="preview-band">
+    <p id="preview-text" class="preview-text"></p>
+  </div>
+</div>
+%>
