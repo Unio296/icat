@@ -41,13 +41,15 @@ class PictureUploader < CarrierWave::Uploader::Base
           x2 = img.width/2*(1+model.band_width.to_f/100)
           y1 = img.height/2*(1-model.band_height.to_f/100)
           y2 = img.height/2*(1+model.band_height.to_f/100)
+          sentense = model.title.gsub(/\r\n|\r|\n/," ")
+          #debugger
           c.gravity 'center'                  #位置は画像中央
           c.fill 'black'
           c.draw "fill-opacity 0.5 rectangle #{x1}, #{y1}, #{x2}, #{y2}"
           c.font FONT
           c.fill 'white'                      #文字色
           c.pointsize "#{model.font_size}"    #文字サイズ
-          c.draw "text 0,0 #{model.title}"    #テキスト挿入
+          c.draw "text 0,0 '#{sentense}'"    #テキスト挿入
         end
       img = yield(img) if block_given?
       img
