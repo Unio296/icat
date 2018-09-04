@@ -1,0 +1,19 @@
+<% provide(:title, "Contact") %>
+<h1>お問い合わせ</h1>
+    <form action="https://formspree.io/unioblog@gmail.com" method="POST">
+                <div class="form-group">
+                 <!--  <label for="name">Name</label> -->
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                 <!--  <label for="email">Email Address</label> -->
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                </div>
+                <div class="form-group">
+               <!--    <label for="message">Message</label> -->
+                  <textarea name="message" cols="40" rows="10" class="form-control" id="message" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">送信</button>
+                <input type="hidden" name="_next" value="https://icatapp.herokuapp.com/thanks"  />
+                <input type="hidden" name="_subject" value="iCatからのコンタクト" />
+      </form>

@@ -6,4 +6,12 @@ class StaticPagesController < ApplicationController
   def privacy
 
   end
+
+  def contact
+
+  end
+
+  def thanks
+
+  end
 end

@@ -4,12 +4,13 @@ Rails.application.routes.draw do
   
   get "/terms", to: "static_pages#terms"
   get "/privacy", to: "static_pages#privacy"
+  get "/contact", to: "static_pages#contact"
+  get "/thanks", to: "static_pages#thanks"
 
   get "/:id", to: "pictures#show"                   #生成後画像表示ページ
   get "/:id", to: "pictures#new", as:"create"
   get "/", to: "pictures#new", as:"pictures"                      
   post "/", to: "pictures#create"                  #画像生成POST
   
-  get "/terms", to: "static_pages#terms"
-  get "/privacy", to: "static_pages#privacy"
+
 end
