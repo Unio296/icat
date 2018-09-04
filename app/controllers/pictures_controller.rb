@@ -14,7 +14,6 @@ class PicturesController < ApplicationController
         redirect_to action:"show",id: @picture.id
       else
         #保存失敗時
-        #render 'new'
         flash[:danger] = "画像を選択してください"
         redirect_to root_path
       end
