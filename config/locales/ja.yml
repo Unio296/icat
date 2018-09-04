@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      picture: 画像
+    attributes:
+      picture:
+        title: タイトル
+        font_size: 文字サイズ
+        band_width: 帯横幅
+        band_height: 帯縦幅
+        filepath: 画像ファイル

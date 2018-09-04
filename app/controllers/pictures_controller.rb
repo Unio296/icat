@@ -11,10 +11,12 @@ class PicturesController < ApplicationController
       if @picture.save
         #保存成功時
         flash[:success] = "画像を生成しました"
-        redirect_to @picture
+        redirect_to action:"show",id: @picture.id
       else
         #保存失敗時
-        render 'new'
+        #render 'new'
+        flash[:danger] = "画像を選択してください"
+        redirect_to root_path
       end
     end
     
@@ -22,7 +24,11 @@ class PicturesController < ApplicationController
     def show
       @picture = Picture.find_by_id(params[:id])
       #見つからなかった場合、rootに戻る
-      redirect_to root_path if @picture.nil?
+      if @picture.nil? then
+        flash[:danger] = "画像が見つかりませんでした。再生成してください。"
+        redirect_to root_path
+      end
+      
     end
       
       private

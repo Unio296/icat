@@ -6,7 +6,7 @@
   <div class="col-md-6 col-md-offset-3">
     <%= form_for(@picture) do |f| %>
     <%= render 'shared/error_messages' %>
-      <%= f.label :title %>
+      <%= f.label :title , 'タイトル'%>
       <%= f.text_field :title %>
 
       <%= f.label :font_size, "文字サイズ：60" %>
@@ -24,6 +24,10 @@
     <% end %>
   </div>
 </div>
+
+<div id="discription">
+  
+<div>
 
 <%# プレビュー未実装
 <div id="preview" class="preview">
