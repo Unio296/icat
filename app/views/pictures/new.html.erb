@@ -1,5 +1,9 @@
 <% provide(:title, "Home") %>
-<h1>画像アップロード</h1>
+
+<%#タイトル%>
+
+  <h1 class="title">iCat</h1>
+  <h2>タイトル入りアイキャッチ画像生成サービス</h2>
 
 <%#アップロードフォーム%>
 <div class="row">
@@ -18,17 +22,28 @@
       <%= f.label :band_height, "帯縦幅：50%" %>
       <%= f.range_field :band_height, min: 0, max: 100, step: 1, value: 50 %>
 
+      <%= f.label :filepath, "画像" %>
       <%= f.file_field :filepath %>
 
-      <%= f.submit "Post", class: "btn btn-primary" %>
+      <%= f.submit "画像を生成する", class: "btn btn-primary" %>
     <% end %>
   </div>
 </div>
 
-<div id="discription">
-  
-<div>
-
+<div id="disc">
+  <h2>アイキャッチ画像にタイトルを簡単挿入</h2>
+  <div class="disc-content">
+    <div class="disc-before">
+      <%= image_tag 'cat_before_30.jpg' %>
+    </div>
+    <div class="arrow">
+    <%= fa_icon 'angle-double-right 5x' %>
+    </div>
+    <div class="disc-after">
+      <%= image_tag 'cat_after_30.jpg'%>
+    </div>
+  </div>
+</div>
 <%# プレビュー未実装
 <div id="preview" class="preview">
   <div id="preview-band" class="preview-band">

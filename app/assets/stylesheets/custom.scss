@@ -195,3 +195,50 @@ input {
 .disp_img {
   text-align: center;
 }
+
+#disc{
+  width:100%;
+  margin:50px auto 0;
+  text-align:center;
+  
+  h2{
+    display:inline-block;
+    width:300px;
+    height:20px;
+    margin:15px;
+  }
+
+  .disc-before, .disc-after{
+  display:inline-block;
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+  }
+
+  .arrow{
+    display:inline-block;
+    width:100px;
+    height:189px;
+    line-height:189px;
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
+    i{
+      vertical-align: middle;
+    }
+  }
+}
+
+.title{
+  font-family:memoir-square;
+  font-size:4.0rem;
+}
+//  .disc-before{
+//    display:inline-block;
+//    width:284px;
+//    height:189px;
+//    background-image: image-url('cat_before_30.jpg');
+//  }
+//  .disc-after{
+//    display:inline-block;
+//    width:284px;
+//    height:189px;
+//    background-image: image-url('cat_after_30.jpg');
+//  }
+
